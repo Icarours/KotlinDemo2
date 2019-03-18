@@ -5,6 +5,31 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Main2Activity">
+        tools:context=".activity.Main2Activity">
 
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="change"
+            style="@style/btn1"
+            android:id="@+id/btn_change" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="btn_toast"
+            style="@style/btn1"
+            android:id="@+id/btn_toast" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_change" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+    <Button
+            android:text="btn_long_toast"
+            style="@style/btn1"
+            android:id="@+id/btn_long_toast" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_toast" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

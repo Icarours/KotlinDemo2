@@ -1,4 +1,4 @@
-package syl.com.kotlindemo2
+package syl.com.kotlindemo2.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,12 +7,13 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import syl.com.kotlindemo2.R
 
-class MainActivity : AppCompatActivity() {
+class Main3Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main3)
         val iv = findViewById<ImageView>(R.id.iv)
         findViewById<View>(R.id.btn1).setOnClickListener {
             iv.setImageResource(R.drawable.mm1)
@@ -25,36 +26,36 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("MainActivity", "onDestroy()..")
+        Log.d("Main3Activity", "onDestroy()..")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.d("MainActivity", "onStart()..")
+        Log.d("Main3Activity", "onStart()..")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("MainActivity", "onResume()..")
+        Log.d("Main3Activity", "onResume()..")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.d("MainActivity", "onRestart()..")
+        Log.d("Main3Activity", "onRestart()..")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("MainActivity", "onPause()..")
+        Log.d("Main3Activity", "onPause()..")
     }
 
     override fun onSaveInstanceState(outState: Bundle?, outPersistentState: PersistableBundle?) {
         super.onSaveInstanceState(outState, outPersistentState)
-        Log.d("MainActivity", "onSaveInstanceState()..")
+        Log.d("Main3Activity", "onSaveInstanceState()..")
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        Log.d("MainActivity", "onActivityResult()..")
+        Log.d("Main3Activity", "onActivityResult()..")
     }
 }

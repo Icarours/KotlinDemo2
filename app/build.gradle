@@ -13,6 +13,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -32,7 +33,13 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha03'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+    implementation 'com.google.android.material:material:1.0.0-alpha1'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.0-alpha1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.2-alpha02'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha02'
+    //最新代码还没更新到 jcenter 仓库，推荐使用方法二依赖项目
+    implementation 'com.github.baserecycleradapter:library:1.1.0'
+    //RecyclerView框架
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.31'
 }
