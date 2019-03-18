@@ -11,7 +11,13 @@ import syl.com.kotlindemo2.R
 import syl.com.kotlindemo2.fragment.ContentFragment1
 import syl.com.kotlindemo2.fragment.ContentFragment2
 import syl.com.kotlindemo2.fragment.ContentFragment3
-
+/**
+ * author   Bright
+ * date     2019/3/19 0:57
+ * desc
+ * 主界面
+ * https://blog.csdn.net/aqi00/article/details/75283548
+ */
 class MainActivity : AppCompatActivity() {
     var fragments: MutableList<Fragment> = ArrayList()
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
