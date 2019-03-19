@@ -1,14 +1,18 @@
 package syl.com.kotlindemo2.activity
 
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import androidx.annotation.RequiresApi
+import androidx.appcompat.widget.Toolbar
 import syl.com.kotlindemo2.R
+import syl.com.kotlindemo2.base.BaseActivity
 
-class Main2Activity : AppCompatActivity() {
+class Main2Activity : BaseActivity() {
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
@@ -25,5 +29,7 @@ class Main2Activity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_long_toast).setOnClickListener {
             Toast.makeText(this, "弹出btn_long_toast toast", Toast.LENGTH_SHORT).show()
         }
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        initToolBar(toolbar)
     }
 }

@@ -1,13 +1,16 @@
 package syl.com.kotlindemo2.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import syl.com.kotlindemo2.R
+import syl.com.kotlindemo2.activity.Content1Activity
 import syl.com.kotlindemo2.adapter.ContentAdapter
 import syl.com.kotlindemo2.base.BaseFragment
 import syl.com.kotlindemo2.bean.TitleBean
@@ -18,7 +21,7 @@ import syl.com.kotlindemo2.bean.TitleBean
  * @Called
  */
 class ContentFragment1 : BaseFragment() {
-    var mList: MutableList<TitleBean>? = mutableListOf<TitleBean>()
+    var mList: MutableList<TitleBean>? = mutableListOf()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_content1, container, false)
         val rv = rootView.findViewById<RecyclerView>(R.id.rv)
@@ -29,12 +32,19 @@ class ContentFragment1 : BaseFragment() {
 
         val adapter = ContentAdapter(R.layout.rv_title, mList)
         rv.adapter = adapter
+        adapter.setOnItemClickListener { adapter1, view, position ->
+            startActivity(Intent(activity, Content1Activity::class.java).putExtra("title", mList?.get(position)))
+            Toast.makeText(context, "clicked---$position", Toast.LENGTH_SHORT).show()
+        }
         return rootView
     }
 
     override fun initData() {
-        for (i in 0..20) {
-            mList?.add(i, TitleBean(i, "title--" + i, "description--" + i))
+        mList!!.add(TitleBean(0, "Activity", "kotlin 编写Activity"))
+        mList!!.add(TitleBean(1, "PassValueFragment", "kotlin 编写 PassValueFragment"))
+        mList!!.add(TitleBean(2, "PassValueFragment", "kotlin 编写 PassValueFragment--2"))
+        for (i in 20..60) {
+            mList?.add(TitleBean(i, "title--$i", "description--$i"))
         }
     }
 }

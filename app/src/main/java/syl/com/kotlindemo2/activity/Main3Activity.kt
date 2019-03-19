@@ -1,16 +1,20 @@
 package syl.com.kotlindemo2.activity
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.annotation.RequiresApi
+import androidx.appcompat.widget.Toolbar
 import syl.com.kotlindemo2.R
+import syl.com.kotlindemo2.base.BaseActivity
 
-class Main3Activity : AppCompatActivity() {
+class Main3Activity : BaseActivity() {
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
@@ -22,6 +26,8 @@ class Main3Activity : AppCompatActivity() {
             val intent = Intent(this, Main2Activity().javaClass)
             startActivity(intent)
         }
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        initToolBar(toolbar)
     }
 
     override fun onDestroy() {

@@ -1,13 +1,14 @@
 package syl.com.kotlindemo2.activity
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.Window
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import syl.com.kotlindemo2.R
+import syl.com.kotlindemo2.base.BaseActivity
 import syl.com.kotlindemo2.fragment.ContentFragment1
 import syl.com.kotlindemo2.fragment.ContentFragment2
 import syl.com.kotlindemo2.fragment.ContentFragment3
@@ -18,7 +19,7 @@ import syl.com.kotlindemo2.fragment.ContentFragment3
  * 主界面
  * https://blog.csdn.net/aqi00/article/details/75283548
  */
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     var fragments: MutableList<Fragment> = ArrayList()
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         val fragmentManager = supportFragmentManager
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_main)
         val fragmentManager = supportFragmentManager
         val transaction = fragmentManager.beginTransaction()

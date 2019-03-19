@@ -1,0 +1,67 @@
+package syl.com.kotlindemo2.activity
+
+import android.annotation.TargetApi
+import android.os.Build
+import android.os.Bundle
+import android.view.Window
+import androidx.appcompat.widget.Toolbar
+import syl.com.kotlindemo2.R
+import syl.com.kotlindemo2.base.BaseActivity
+import syl.com.kotlindemo2.bean.TitleBean
+import syl.com.kotlindemo2.fragment.content1.BtnFragment
+import syl.com.kotlindemo2.fragment.content1.Demo1Fragment
+import syl.com.kotlindemo2.fragment.content1.PassValueFragment
+
+class Content1Activity : BaseActivity() {
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
+        setContentView(R.layout.activity_content1)
+        val intent = intent
+        val titleBean = intent.getParcelableExtra("title") as TitleBean
+        val mToolbar = findViewById<Toolbar>(R.id.toolbar)
+        mToolbar.title = titleBean!!.title
+        mToolbar.title = titleBean!!.title
+        mToolbar.subtitle = titleBean!!.description
+        initToolBar(mToolbar)
+        initFragment(titleBean)
+    }
+
+    private fun initFragment(titleBean: TitleBean) {
+        val fragmentManager = supportFragmentManager
+        val transaction = fragmentManager.beginTransaction()
+        when (titleBean.id) {
+            0 -> {
+                transaction.replace(R.id.fl_content1, BtnFragment())
+                transaction.commit()
+            }
+            1 -> {
+                val valueFragment = PassValueFragment()
+                transaction.replace(R.id.fl_content1, valueFragment)
+                val argsv = Bundle()
+                argsv.putParcelable("title", titleBean)
+                argsv.putString("key1", "value1")
+                argsv.putString("key2", "value2")
+                valueFragment.arguments = argsv
+                transaction.commit()
+            }
+            2 -> {
+                val valueFragment = PassValueFragment()
+                transaction.replace(R.id.fl_content1, valueFragment)
+                val args = Bundle()
+                args.putParcelable("title", titleBean)
+                valueFragment.arguments = args
+                transaction.commit()
+            }
+            else -> {
+                val fragment = Demo1Fragment()
+                transaction.replace(R.id.fl_content1, fragment)
+                val args = Bundle()
+                args.putParcelable("title", titleBean)
+                fragment.arguments = args
+                transaction.commit()
+            }
+        }
+    }
+}
