@@ -43,6 +43,7 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(0, "Activity", "kotlin 编写Activity"))
         mList!!.add(TitleBean(1, "PassValueFragment", "kotlin 编写 PassValueFragment"))
         mList!!.add(TitleBean(2, "PassValueFragment", "kotlin 编写 PassValueFragment--2"))
+        mList!!.add(TitleBean(3, "Anko", "Anko 举例"))
         for (i in 20..60) {
             mList?.add(TitleBean(i, "title--$i", "description--$i"))
         }

@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar
 import syl.com.kotlindemo2.R
 import syl.com.kotlindemo2.base.BaseActivity
 import syl.com.kotlindemo2.bean.TitleBean
+import syl.com.kotlindemo2.fragment.content1.AnkoFragment
 import syl.com.kotlindemo2.fragment.content1.BtnFragment
 import syl.com.kotlindemo2.fragment.content1.Demo1Fragment
 import syl.com.kotlindemo2.fragment.content1.PassValueFragment
@@ -52,6 +53,10 @@ class Content1Activity : BaseActivity() {
                 val args = Bundle()
                 args.putParcelable("title", titleBean)
                 valueFragment.arguments = args
+                transaction.commit()
+            }
+            3 -> {
+                transaction.replace(R.id.fl_content1, AnkoFragment())
                 transaction.commit()
             }
             else -> {
