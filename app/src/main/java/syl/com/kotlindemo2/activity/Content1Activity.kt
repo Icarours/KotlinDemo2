@@ -8,10 +8,7 @@ import androidx.appcompat.widget.Toolbar
 import syl.com.kotlindemo2.R
 import syl.com.kotlindemo2.base.BaseActivity
 import syl.com.kotlindemo2.bean.TitleBean
-import syl.com.kotlindemo2.fragment.content1.AnkoFragment
-import syl.com.kotlindemo2.fragment.content1.BtnFragment
-import syl.com.kotlindemo2.fragment.content1.Demo1Fragment
-import syl.com.kotlindemo2.fragment.content1.PassValueFragment
+import syl.com.kotlindemo2.fragment.content1.*
 
 class Content1Activity : BaseActivity() {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -57,6 +54,10 @@ class Content1Activity : BaseActivity() {
             }
             3 -> {
                 transaction.replace(R.id.fl_content1, AnkoFragment())
+                transaction.commit()
+            }
+            4 -> {
+                transaction.replace(R.id.fl_content1, KotlinStart3Fragment())
                 transaction.commit()
             }
             else -> {

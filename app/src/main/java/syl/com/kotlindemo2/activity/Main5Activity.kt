@@ -24,6 +24,12 @@ class Main5Activity : BaseActivity() {
             }
             verticalLayout {
                 padding = dip(30)
+                textView {
+                    text = context.getString(R.string.tv_str)
+                    textSize = 36f
+                    textColor = resources.getColor(R.color.colorAccent)
+                    background = getDrawable(R.color.colorPrimaryDark)
+                }.lparams(width = wrapContent, height = dip(200))
                 editText {
                     hint = "Name"
                     textSize = 24f
@@ -34,6 +40,8 @@ class Main5Activity : BaseActivity() {
                 }
                 button("Login") {
                     textSize = 26f
+                }
+                imageView(R.drawable.mm1) {
                 }
             }
         }
