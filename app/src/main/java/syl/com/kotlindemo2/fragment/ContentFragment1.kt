@@ -44,7 +44,12 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(1, "PassValueFragment", "kotlin 编写 PassValueFragment"))
         mList!!.add(TitleBean(2, "PassValueFragment", "kotlin 编写 PassValueFragment--2"))
         mList!!.add(TitleBean(3, "Anko", "Anko 举例"))
-        mList!!.add(TitleBean(4, "Kotlin入门基本数据类型", "Kotlin入门(3)基本变量类型的用法"))
+        mList!!.add(TitleBean(4, "Kotlin入门-基本数据类型", "Kotlin入门(3)基本变量类型的用法"))
+        mList!!.add(TitleBean(5, "Kotlin入门-数组", "Kotlin数组"))
+        mList!!.add(TitleBean(6, "Kotlin入门-字符串", "Kotlin字符串"))
+        mList!!.add(TitleBean(7, "Kotlin入门-存储容器", "set集合"))
+        mList!!.add(TitleBean(8, "Kotlin入门-存储容器", "list队列"))
+        mList!!.add(TitleBean(9, "Kotlin入门-存储容器", ",map映射"))
         for (i in 20..60) {
             mList?.add(TitleBean(i, "title--$i", "description--$i"))
         }

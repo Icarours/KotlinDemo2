@@ -30,7 +30,7 @@ class KotlinStart3Fragment : BaseFragment() {
             it.find<Button>(R.id.btn_boolean)
                 .setOnClickListener { tv_result.text = original.toFloat().isNaN().toString() }
             it.find<Button>(R.id.btn_char).setOnClickListener { tv_result.text = original.toChar().toString() }
-            //只有Float和Double可调用isNaN方法，其它基本类型都没有isNaN
+            //只有Float和Double可调用isNaN方法，其它基本类型都没有isNaN,是否数字
         }
     }
 }

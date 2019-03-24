@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:text="数组元素列表:"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" android:id="@+id/tv_content"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+        <Button android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/btn_int"
+                android:text="整型数组"
+                android:layout_height="wrap_content"/>
+        <Button android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/btn_int_long"
+                android:text="长整形数组"
+                android:layout_height="wrap_content"/>
+        <Button android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="浮点型数组"
+                android:id="@+id/btn_float"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+        <Button android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="双精度数组"
+                android:id="@+id/btn_double"
+                android:layout_height="wrap_content"/>
+        <Button android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="布尔型数组"
+                android:id="@+id/btn_boolean"
+                android:layout_height="wrap_content"/>
+        <Button android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="字符数组"
+                android:id="@+id/btn_char"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+        <Button android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="字符串数组"
+                android:id="@+id/btn_string"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>

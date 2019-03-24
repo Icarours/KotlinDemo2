@@ -60,6 +60,26 @@ class Content1Activity : BaseActivity() {
                 transaction.replace(R.id.fl_content1, KotlinStart3Fragment())
                 transaction.commit()
             }
+            5 -> {
+                transaction.replace(R.id.fl_content1, KotlinArrayFragment())
+                transaction.commit()
+            }
+            6 -> {
+                transaction.replace(R.id.fl_content1, KotlinStringFragment())
+                transaction.commit()
+            }
+            7 -> {
+                transaction.replace(R.id.fl_content1, KotlinSetFragment())
+                transaction.commit()
+            }
+            8 -> {
+                transaction.replace(R.id.fl_content1, KotlinListFragment())
+                transaction.commit()
+            }
+            9 -> {
+                transaction.replace(R.id.fl_content1, KotlinMapFragment())
+                transaction.commit()
+            }
             else -> {
                 val fragment = Demo1Fragment()
                 transaction.replace(R.id.fl_content1, fragment)
