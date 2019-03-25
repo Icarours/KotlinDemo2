@@ -80,6 +80,10 @@ class Content1Activity : BaseActivity() {
                 transaction.replace(R.id.fl_content1, KotlinMapFragment())
                 transaction.commit()
             }
+            10 -> {
+                transaction.replace(R.id.fl_content1, KotlinConditionFragment())
+                transaction.commit()
+            }
             else -> {
                 val fragment = Demo1Fragment()
                 transaction.replace(R.id.fl_content1, fragment)

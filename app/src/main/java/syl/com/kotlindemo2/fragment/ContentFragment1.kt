@@ -49,7 +49,8 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(6, "Kotlin入门-字符串", "Kotlin字符串"))
         mList!!.add(TitleBean(7, "Kotlin入门-存储容器", "set集合"))
         mList!!.add(TitleBean(8, "Kotlin入门-存储容器", "list队列"))
-        mList!!.add(TitleBean(9, "Kotlin入门-存储容器", ",map映射"))
+        mList!!.add(TitleBean(9, "Kotlin入门-存储容器", "map映射"))
+        mList!!.add(TitleBean(10, "Kotlin入门-条件分支", "条件分支的实现"))
         for (i in 20..60) {
             mList?.add(TitleBean(i, "title--$i", "description--$i"))
         }

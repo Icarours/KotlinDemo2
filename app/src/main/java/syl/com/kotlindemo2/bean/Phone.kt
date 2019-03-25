@@ -5,4 +5,8 @@ package syl.com.kotlindemo2.bean
  * @Describe
  * @Called
  */
-open class Phone(val name: String, val price: Float, val desc: String)
+open class Phone(val name: String, val price: Float, val desc: String){
+    override fun toString(): String {
+        return "Phone(name='$name', price=$price, desc='$desc')"
+    }
+}
