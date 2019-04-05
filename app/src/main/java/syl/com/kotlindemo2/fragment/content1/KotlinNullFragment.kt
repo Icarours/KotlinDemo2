@@ -13,8 +13,8 @@ import syl.com.kotlindemo2.base.BaseFragment
  * @Describe 空值的判断和处理
  *
  * 总结一下，Kotlin引入了空安全的概念，并在编译时开展对象是否为空的校验。相关的操作符说明概括如下：
-1、声明对象实例时，在类型名称后面加问号，表示该对象可以为空；
-2、调用对象方法时，在实例名称后面加问号，表示一旦实例为空就返回null；
+1、声明对象实例时，在类型名称后面加问号?，表示该对象可以为空；
+2、调用对象方法时，在实例名称后面加问号?，表示一旦实例为空就返回null；
 3、新引入运算符“?:”，一旦实例为空就返回该运算符右边的表达式；
 4、新引入运算符“!!”，通知编译器不做非空校验，运行时一旦发现实例为空就扔出异常；
 
@@ -34,6 +34,24 @@ isNotBlank : 字串长度大于0且不是全空格串时返回true，只有非�
 class KotlinNullFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_kotlin_null, container, false).apply {
+
+            val sb = StringBuilder()
+            sb.append(
+                "总结一下，Kotlin引入了空安全的概念，并在编译时开展对象是否为空的校验。相关的操作符说明概括如下：\n" +
+                        "1、声明对象实例时，在类型名称后面加问号?，表示该对象可以为空；\n" +
+                        "2、调用对象方法时，在实例名称后面加问号?，表示一旦实例为空就返回null；\n" +
+                        "3、新引入运算符“?:”，一旦实例为空就返回该运算符右边的表达式；\n" +
+                        "4、新引入运算符“!!”，通知编译器不做非空校验，运行时一旦发现实例为空就扔出异常；\n" +
+                        "\n" +
+                        "isNullOrEmpty : 为空指针或者字串长度为0时返回true，非空串与可空串均可调用。\n" +
+                        "isNullOrBlank : 为空指针或者字串长度为0或者全为空格时返回true，非空串与可空串均可调用。\n" +
+                        "isEmpty : 字串长度为0时返回true，只有非空串可调用。\n" +
+                        "isBlank : 字串长度为0或者全为空格时返回true，只有非空串可调用。\n" +
+                        "isNotEmpty : 字串长度大于0时返回true，只有非空串可调用。\n" +
+                        "isNotBlank : 字串长度大于0且不是全空格串时返回true，只有非空串可调用。"
+            )
+            tv_tips.text = sb.toString()
+
             var strA = "非空"
             var strB: String? = null
             var strC: String? = "空串"

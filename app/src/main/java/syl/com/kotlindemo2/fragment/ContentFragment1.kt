@@ -54,8 +54,8 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(11, "Kotlin入门-循环语句", "循环语句的实现"))
         mList!!.add(TitleBean(12, "Kotlin入门-空值的判断和处理", "空值的判断和处理"))
         mList!!.add(TitleBean(13, "Kotlin入门-等式判断", "等式判断"))
-        for (i in 20..60) {
-            mList?.add(TitleBean(i, "title--$i", "description--$i"))
-        }
+        mList!!.add(TitleBean(14, "Kotlin入门-函数的基本用法", "函数的基本用法"))
+        mList!!.add(TitleBean(15, "Kotlin入门-函数-可变输入参数", "函数-可变输入参数"))
+        mList!!.add(TitleBean(16, "Kotlin入门-函数-特殊函数", "函数-特殊函数"))
     }
 }

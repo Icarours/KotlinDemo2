@@ -9,7 +9,12 @@ import syl.com.kotlindemo2.R
 import syl.com.kotlindemo2.base.BaseActivity
 import syl.com.kotlindemo2.bean.TitleBean
 import syl.com.kotlindemo2.fragment.content1.*
-
+/**
+ * author   Bright
+ * date     2019/4/5 15:34
+ * desc
+ * Activity的基类
+ */
 class Content1Activity : BaseActivity() {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,6 +99,18 @@ class Content1Activity : BaseActivity() {
             }
             13 -> {
                 transaction.replace(R.id.fl_content1, KotlinEqualFragment())
+                transaction.commit()
+            }
+            14 -> {
+                transaction.replace(R.id.fl_content1, KotlinFunctionFragment())
+                transaction.commit()
+            }
+            15 -> {
+                transaction.replace(R.id.fl_content1, KotlinParamFragment())
+                transaction.commit()
+            }
+            16 -> {
+                transaction.replace(R.id.fl_content1, KotlinSpecialFunFragment())
                 transaction.commit()
             }
             else -> {

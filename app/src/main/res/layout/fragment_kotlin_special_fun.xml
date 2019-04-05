@@ -27,19 +27,19 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="校验题目："
+                        android:text="题目："
                         android:textColor="#000000"
-                        android:textSize="17sp"/>
+                        android:textSize="17sp" />
 
                 <TextView
-                        android:id="@+id/tv_check_title"
+                        android:id="@+id/tv_function_title"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:gravity="center"
-                        android:text=""
+                        android:text="脑筋急转弯"
                         android:textColor="#000000"
-                        android:textSize="17sp"/>
+                        android:textSize="17sp" />
 
             </LinearLayout>
 
@@ -55,18 +55,18 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="校验结果："
+                        android:text="答案："
                         android:textColor="#000000"
-                        android:textSize="17sp"/>
+                        android:textSize="17sp" />
 
                 <TextView
-                        android:id="@+id/tv_check_result"
+                        android:id="@+id/tv_function_result"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:gravity="center"
                         android:textColor="#000000"
-                        android:textSize="17sp"/>
+                        android:textSize="17sp" />
 
             </LinearLayout>
 
@@ -76,31 +76,22 @@
                     android:orientation="horizontal">
 
                 <Button
-                        android:id="@+id/btn_judge_a"
+                        android:id="@+id/btn_vararg_generic"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="判断A是否为空"
+                        android:text="可变参数泛型"
                         android:textColor="#000000"
-                        android:textSize="17sp"/>
+                        android:textSize="17sp" />
 
                 <Button
-                        android:id="@+id/btn_judge_b"
+                        android:id="@+id/btn_generic_number"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="判断B是否为空"
+                        android:text="数值类型泛型"
                         android:textColor="#000000"
-                        android:textSize="17sp"/>
-
-                <Button
-                        android:id="@+id/btn_judge_c"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="判断C是否为空"
-                        android:textColor="#000000"
-                        android:textSize="17sp"/>
+                        android:textSize="17sp" />
 
             </LinearLayout>
 
@@ -110,74 +101,35 @@
                     android:orientation="horizontal">
 
                 <Button
-                        android:id="@+id/btn_length_a"
+                        android:id="@+id/btn_function_simplify"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="获取A串长度"
+                        android:text="简化函数"
                         android:textColor="#000000"
-                        android:textSize="17sp"/>
+                        android:textSize="17sp" />
 
                 <Button
-                        android:id="@+id/btn_length_b"
+                        android:id="@+id/btn_function_recursion"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="获取B串长度"
+                        android:text="尾递归函数"
                         android:textColor="#000000"
-                        android:textSize="17sp"/>
+                        android:textSize="17sp" />
 
                 <Button
-                        android:id="@+id/btn_length_c"
+                        android:id="@+id/btn_function_higher"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="获取C串长度"
+                        android:text="高阶函数"
                         android:textColor="#000000"
-                        android:textSize="17sp"/>
+                        android:textSize="17sp" />
 
             </LinearLayout>
 
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                <Button
-                        android:id="@+id/btn_question_dot"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="使用?."
-                        android:textColor="#000000"
-                        android:textSize="17sp"/>
-
-                <Button
-                        android:id="@+id/btn_question_colon"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="使用?:"
-                        android:textColor="#000000"
-                        android:textSize="17sp"/>
-
-                <Button
-                        android:id="@+id/btn_exclamation_two"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="使用!!"
-                        android:textColor="#000000"
-                        android:textSize="17sp"/>
-
-            </LinearLayout>
-
-            <TextView android:layout_width="match_parent"
-                      android:text="@string/app_name"
-                      android:id="@+id/tv_tips"
-                      android:textColor="#000000"
-                      android:textSize="17sp"
-                      android:layout_height="wrap_content"/>
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>
