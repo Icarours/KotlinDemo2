@@ -9,6 +9,7 @@ import syl.com.kotlindemo2.R
 import syl.com.kotlindemo2.base.BaseActivity
 import syl.com.kotlindemo2.bean.TitleBean
 import syl.com.kotlindemo2.fragment.content1.*
+
 /**
  * author   Bright
  * date     2019/4/5 15:34
@@ -111,6 +112,18 @@ class Content1Activity : BaseActivity() {
             }
             16 -> {
                 transaction.replace(R.id.fl_content1, KotlinSpecialFunFragment())
+                transaction.commit()
+            }
+            17 -> {
+                transaction.replace(R.id.fl_content1, KotlinDateFragment())
+                transaction.commit()
+            }
+            18 -> {
+                transaction.replace(R.id.fl_content1, KotlinClassFragment())
+                transaction.commit()
+            }
+            19 -> {
+                transaction.replace(R.id.fl_content1, KotlinMemberFragment())
                 transaction.commit()
             }
             else -> {
