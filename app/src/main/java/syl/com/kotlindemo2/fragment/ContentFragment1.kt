@@ -60,5 +60,7 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(17, "Kotlin入门-函数-日期函数", "函数-日期函数"))
         mList!!.add(TitleBean(18, "Kotlin入门-类", "kotlin的类"))
         mList!!.add(TitleBean(19, "Kotlin入门-类-伴生", "kotlin的类-伴生"))
+        mList!!.add(TitleBean(20, "Kotlin入门-类-继承", "kotlin的类-继承"))
+        mList!!.add(TitleBean(21, "Kotlin入门-类-特殊类", "kotlin的类-特殊类"))
     }
 }

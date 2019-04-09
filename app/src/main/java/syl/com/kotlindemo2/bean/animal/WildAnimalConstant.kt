@@ -14,7 +14,7 @@ class WildAnimalConstant(var name:String, val sex:Int = MALE) {
     }
 
     /**
-     * 半生类,类似于Java中的静态类
+     * 伴生类,类似于Java中的静态类
      * //在类加载时就运行伴生对象的代码块，其作用相当于Java里面的static { ... }代码块
     //关键字companion表示伴随，object表示对象，WildAnimal表示伴生对象的名称
      */

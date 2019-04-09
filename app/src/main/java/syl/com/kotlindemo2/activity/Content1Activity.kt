@@ -126,6 +126,14 @@ class Content1Activity : BaseActivity() {
                 transaction.replace(R.id.fl_content1, KotlinMemberFragment())
                 transaction.commit()
             }
+            20 -> {
+                transaction.replace(R.id.fl_content1, KotlinInheritFragment())
+                transaction.commit()
+            }
+            21 -> {
+                transaction.replace(R.id.fl_content1, KotlinSpecialClassFragment())
+                transaction.commit()
+            }
             else -> {
                 val fragment = Demo1Fragment()
                 transaction.replace(R.id.fl_content1, fragment)
