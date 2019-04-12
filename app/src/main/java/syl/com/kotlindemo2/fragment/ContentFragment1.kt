@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import syl.com.kotlindemo2.R
+import syl.com.kotlindemo2.activity.ButtonClickActivity
 import syl.com.kotlindemo2.activity.Content1Activity
 import syl.com.kotlindemo2.adapter.ContentAdapter
 import syl.com.kotlindemo2.base.BaseFragment
@@ -33,7 +34,16 @@ class ContentFragment1 : BaseFragment() {
         val adapter = ContentAdapter(R.layout.rv_title, mList)
         rv.adapter = adapter
         adapter.setOnItemClickListener { adapter1, view, position ->
-            startActivity(Intent(activity, Content1Activity::class.java).putExtra("title", mList?.get(position)))
+            if (22 == position) {//该条目直接跳转到一个新的Activity,ButtonClickActivity
+                startActivity(
+                    Intent(activity, ButtonClickActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "button", "button 在Activity中")
+                    )
+                )
+            } else {//其他条目跳转到Content1Activity
+                startActivity(Intent(activity, Content1Activity::class.java).putExtra("title", mList?.get(position)))
+            }
             Toast.makeText(context, "clicked---$position", Toast.LENGTH_SHORT).show()
         }
         return rootView
@@ -62,5 +72,10 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(19, "Kotlin入门-类-伴生", "kotlin的类-伴生"))
         mList!!.add(TitleBean(20, "Kotlin入门-类-继承", "kotlin的类-继承"))
         mList!!.add(TitleBean(21, "Kotlin入门-类-特殊类", "kotlin的类-特殊类"))
+        mList!!.add(TitleBean(22, "Kotlin入门-布局控件-Button", "kotlin的布局控件-Button"))
+        mList!!.add(TitleBean(23, "Kotlin入门-布局控件-CheckBox", "kotlin的布局控件-CheckBox"))
+        mList!!.add(TitleBean(24, "Kotlin入门-布局控件-RadioButton", "kotlin的布局控件-RadioButton"))
+        mList!!.add(TitleBean(25, "Kotlin入门-布局控件-LinearLayout", "kotlin的布局控件-LinearLayout"))
+        mList!!.add(TitleBean(26, "Kotlin入门-布局控件-RelativeLayout", "kotlin的布局控件-RelativeLayout"))
     }
 }

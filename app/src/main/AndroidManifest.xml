@@ -32,6 +32,8 @@
         </activity>
         <activity android:name=".activity.Main5Activity">
         </activity>
+        <activity android:name=".activity.ButtonClickActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -134,6 +134,25 @@ class Content1Activity : BaseActivity() {
                 transaction.replace(R.id.fl_content1, KotlinSpecialClassFragment())
                 transaction.commit()
             }
+            22 -> {
+                //该条目直接跳转到一个新的Activity
+            }
+            23 -> {
+                transaction.replace(R.id.fl_content1, KotlinCheckBoxFragment())
+                transaction.commit()
+            }
+            24 -> {
+                transaction.replace(R.id.fl_content1, KotlinRadioButtonFragment())
+                transaction.commit()
+            }
+            25 -> {
+                transaction.replace(R.id.fl_content1, KotlinLinearLayoutFragment())
+                transaction.commit()
+            }
+            26 -> {
+                transaction.replace(R.id.fl_content1, KotlinRelativeLayoutFragment())
+                transaction.commit()
+            }
             else -> {
                 val fragment = Demo1Fragment()
                 transaction.replace(R.id.fl_content1, fragment)
