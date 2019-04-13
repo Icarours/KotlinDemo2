@@ -15,11 +15,55 @@ import syl.com.kotlindemo2.base.BaseFragment
 /**
  * Created by Bright on 2019/4/12.
  * @Describe RelativeLayout
+ *
+ *
+ * 代码里的方位类型有多种取值，比如RelativeLayout.LEFT_OF表示位于指定视图的左边，RelativeLayout.ALIGN_RIGHT表示与指定视图右侧对齐，
+ * RelativeLayout.CENTER_IN_PARENT表示位于上级视图中央等等。除了above和alignParentLeft之外，Anko也提供了所有的相对位置设定方法，具体的对应关系说明见下表。
+Anko库的相对位置    RelativeLayout类的相对位置
+leftOf    LEFT_OF
+sameTop    ALIGN_TOP
+above    ABOVE
+sameLeft    ALIGN_LEFT
+rightOf    RIGHT_OF    
+sameBottom    ALIGN_BOTTOM
+below    BELOW
+sameRight    ALIGN_RIGHT
+centerInParent    CENTER_IN_PARENT
+alignParentLeft    ALIGN_PARENT_LEFT
+centerVertically    CENTER_VERTICAL
+alignParentTop    ALIGN_PARENT_TOP
+centerHorizontally    CENTER_HORIZONTAL
+alignParentRight    ALIGN_PARENT_RIGHT
+alignParentBottom    ALIGN_PARENT_BOTTOM
+---------------------
+作者：湖前琴亭
+来源：CSDN
+原文：https://blog.csdn.net/aqi00/article/details/82829481
+版权声明：本文为博主原创文章，转载请附上博文链接！
  * @Called
  */
 class KotlinRelativeLayoutFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_kotlin_relative_layout, container, false).apply {
+            tv_tips.text="代码里的方位类型有多种取值，比如RelativeLayout.LEFT_OF表示位于指定视图的左边，RelativeLayout.ALIGN_RIGHT" +
+                    "表示与指定视图右侧对齐，RelativeLayout.CENTER_IN_PARENT表示位于上级视图中央等等。" +
+                    "除了above和alignParentLeft之外，Anko也提供了所有的相对位置设定方法，具体的对应关系说明见下表。\n" +
+                    "Anko库的相对位置    RelativeLayout类的相对位置\n" +
+                    "leftOf    LEFT_OF\n" +
+                    "sameTop    ALIGN_TOP\n" +
+                    "above    ABOVE\n" +
+                    "sameLeft    ALIGN_LEFT\n" +
+                    "rightOf    RIGHT_OF    \n" +
+                    "sameBottom    ALIGN_BOTTOM\n" +
+                    "below    BELOW\n" +
+                    "sameRight    ALIGN_RIGHT\n" +
+                    "centerInParent    CENTER_IN_PARENT\n" +
+                    "alignParentLeft    ALIGN_PARENT_LEFT\n" +
+                    "centerVertically    CENTER_VERTICAL\n" +
+                    "alignParentTop    ALIGN_PARENT_TOP\n" +
+                    "centerHorizontally    CENTER_HORIZONTAL\n" +
+                    "alignParentRight    ALIGN_PARENT_RIGHT\n" +
+                    "alignParentBottom    ALIGN_PARENT_BOTTOM"
             btn_add_left.setOnClickListener { v ->
                 val rl_params = RelativeLayout.LayoutParams(dip(50), dip(50))
                 rl_params.leftOf(v)

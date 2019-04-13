@@ -11,6 +11,14 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.ActResponseActivity">
+        </activity>
+        <activity android:name=".activity.ActRequestActivity">
+        </activity>
+        <activity android:name=".activity.ParcelableSecondActivity">
+        </activity>
+        <activity android:name=".activity.ParcelableFirstActivity">
+        </activity>
         <activity
                 android:name=".activity.MainActivity"
                 android:label="@string/app_name">
@@ -33,6 +41,10 @@
         <activity android:name=".activity.Main5Activity">
         </activity>
         <activity android:name=".activity.ButtonClickActivity">
+        </activity>
+        <activity android:name=".activity.ActFirstActivity">
+        </activity>
+        <activity android:name=".activity.ActSecondActivity">
         </activity>
     </application>
 

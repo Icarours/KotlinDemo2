@@ -1,71 +1,76 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical" >
-
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="#00aaff" >
-
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <LinearLayout
-                android:id="@+id/ll_margin"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#ffff99" >
+                android:layout_height="300dp"
+                android:background="#00aaff">
 
-            <View
+            <LinearLayout
+                    android:id="@+id/ll_margin"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#ff0000" />
-        </LinearLayout>
-    </LinearLayout>
+                    android:background="#ffff99">
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-
-            <Button
-                    android:id="@+id/btn_margin_vertical"
-                    style="@style/btn_relative"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="垂直方向margin" />
-
-            <Button
-                    android:id="@+id/btn_margin_horizontal"
-                    style="@style/btn_relative"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="水平方向margin" />
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="vertical">
 
-            <Button
-                    android:id="@+id/btn_padding_vertical"
-                    style="@style/btn_relative"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="垂直方向padding" />
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            <Button
-                    android:id="@+id/btn_padding_horizontal"
-                    style="@style/btn_relative"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="水平方向padding" />
+                <Button
+                        android:id="@+id/btn_margin_vertical"
+                        style="@style/btn_relative"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="垂直方向margin"/>
+
+                <Button
+                        android:id="@+id/btn_margin_horizontal"
+                        style="@style/btn_relative"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="水平方向margin"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/btn_padding_vertical"
+                        style="@style/btn_relative"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="垂直方向padding"/>
+
+                <Button
+                        android:id="@+id/btn_padding_horizontal"
+                        style="@style/btn_relative"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="水平方向padding"/>
+            </LinearLayout>
+
         </LinearLayout>
-
+        <TextView style="@style/text1"
+                  android:text="@string/app_name"
+                  android:id="@+id/tv_tips"/>
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

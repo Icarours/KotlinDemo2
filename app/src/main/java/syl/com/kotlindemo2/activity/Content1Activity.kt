@@ -153,6 +153,22 @@ class Content1Activity : BaseActivity() {
                 transaction.replace(R.id.fl_content1, KotlinRelativeLayoutFragment())
                 transaction.commit()
             }
+            27 -> {
+                transaction.replace(R.id.fl_content1, KotlinConstraintLayoutFragment())
+                transaction.commit()
+            }
+            28 -> {
+                transaction.replace(R.id.fl_content1, KotlinTextMarqueeFragment())
+                transaction.commit()
+            }
+            29 -> {
+                transaction.replace(R.id.fl_content1, KotlinImageScaleFragment())
+                transaction.commit()
+            }
+            30 -> {
+                transaction.replace(R.id.fl_content1, KotlinEditTextFragment())
+                transaction.commit()
+            }
             else -> {
                 val fragment = Demo1Fragment()
                 transaction.replace(R.id.fl_content1, fragment)

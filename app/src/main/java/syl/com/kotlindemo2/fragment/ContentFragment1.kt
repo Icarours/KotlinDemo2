@@ -10,8 +10,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import syl.com.kotlindemo2.R
-import syl.com.kotlindemo2.activity.ButtonClickActivity
-import syl.com.kotlindemo2.activity.Content1Activity
+import syl.com.kotlindemo2.activity.*
 import syl.com.kotlindemo2.adapter.ContentAdapter
 import syl.com.kotlindemo2.base.BaseFragment
 import syl.com.kotlindemo2.bean.TitleBean
@@ -39,6 +38,27 @@ class ContentFragment1 : BaseFragment() {
                     Intent(activity, ButtonClickActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "button", "button 在Activity中")
+                    )
+                )
+            } else if (31 == position) {
+                startActivity(
+                    Intent(activity, ActFirstActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "Activity跳转", "无返回数据")
+                    )
+                )
+            } else if (32 == position) {
+                startActivity(
+                    Intent(activity, ParcelableFirstActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "Activity跳转", "请求打包数据 Parcelable")
+                    )
+                )
+            } else if (33 == position) {
+                startActivity(
+                    Intent(activity, ActRequestActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "Activity跳转", "有返回数据")
                     )
                 )
             } else {//其他条目跳转到Content1Activity
@@ -77,5 +97,12 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(24, "Kotlin入门-布局控件-RadioButton", "kotlin的布局控件-RadioButton"))
         mList!!.add(TitleBean(25, "Kotlin入门-布局控件-LinearLayout", "kotlin的布局控件-LinearLayout"))
         mList!!.add(TitleBean(26, "Kotlin入门-布局控件-RelativeLayout", "kotlin的布局控件-RelativeLayout"))
+        mList!!.add(TitleBean(27, "Kotlin入门-布局控件-ConstraintLayout", "kotlin的布局控件-ConstraintLayout"))
+        mList!!.add(TitleBean(28, "Kotlin入门-布局控件-TextView跑马灯效果", "kotlin的布局控件-TextView跑马灯效果"))
+        mList!!.add(TitleBean(29, "Kotlin入门-布局控件-ImageView", "kotlin的布局控件-ImageView图片的缩放样式"))
+        mList!!.add(TitleBean(30, "Kotlin入门-布局控件-EditText", "kotlin的布局控件-EditText"))
+        mList!!.add(TitleBean(31, "Kotlin入门-Activity跳转", "Activity跳转-无数据返回"))
+        mList!!.add(TitleBean(32, "Kotlin入门-Activity跳转", "Activity跳转-请求打包数据"))
+        mList!!.add(TitleBean(33, "Kotlin入门-Activity跳转", "Activity跳转-有返回数据"))
     }
 }
