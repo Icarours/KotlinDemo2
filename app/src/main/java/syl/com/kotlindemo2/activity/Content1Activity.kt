@@ -169,6 +169,10 @@ class Content1Activity : BaseActivity() {
                 transaction.replace(R.id.fl_content1, KotlinEditTextFragment())
                 transaction.commit()
             }
+            34 -> {
+                transaction.replace(R.id.fl_content1, KotlinAlertDialogFragment())
+                transaction.commit()
+            }
             else -> {
                 val fragment = Demo1Fragment()
                 transaction.replace(R.id.fl_content1, fragment)

@@ -61,6 +61,13 @@ class ContentFragment1 : BaseFragment() {
                         TitleBean(0, "Activity跳转", "有返回数据")
                     )
                 )
+            } else if (35 == position) {
+                startActivity(
+                    Intent(activity, LoginPageActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
+                    )
+                )
             } else {//其他条目跳转到Content1Activity
                 startActivity(Intent(activity, Content1Activity::class.java).putExtra("title", mList?.get(position)))
             }
@@ -104,5 +111,7 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(31, "Kotlin入门-Activity跳转", "Activity跳转-无数据返回"))
         mList!!.add(TitleBean(32, "Kotlin入门-Activity跳转", "Activity跳转-请求打包数据"))
         mList!!.add(TitleBean(33, "Kotlin入门-Activity跳转", "Activity跳转-有返回数据"))
+        mList!!.add(TitleBean(34, "Kotlin入门-AlertDialog", "AlertDialog对话框"))
+        mList!!.add(TitleBean(35, "Kotlin入门-登录页面", "LoginPage登录页面"))
     }
 }
