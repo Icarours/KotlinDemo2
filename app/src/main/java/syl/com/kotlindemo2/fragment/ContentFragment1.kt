@@ -24,7 +24,7 @@ class ContentFragment1 : BaseFragment() {
     var mList: MutableList<TitleBean>? = mutableListOf()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_content1, container, false)
-        val rv = rootView.findViewById<RecyclerView>(R.id.rv)
+        val rv:RecyclerView = rootView.findViewById<RecyclerView>(R.id.rv)
         val linearLayoutManager = LinearLayoutManager(context)
         linearLayoutManager.orientation = RecyclerView.VERTICAL
         rv.layoutManager = linearLayoutManager
@@ -113,5 +113,12 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(33, "Kotlin入门-Activity跳转", "Activity跳转-有返回数据"))
         mList!!.add(TitleBean(34, "Kotlin入门-AlertDialog", "AlertDialog对话框"))
         mList!!.add(TitleBean(35, "Kotlin入门-登录页面", "LoginPage登录页面"))
+        mList!!.add(TitleBean(36, "Kotlin入门-SpinnerDialog下拉列表框", "SpinnerDialog下拉列表框"))
+        mList!!.add(TitleBean(37, "Kotlin入门-ListView", "ListView"))
+        mList!!.add(TitleBean(38, "Kotlin入门-GridView", "GridView"))
+        mList!!.add(TitleBean(39, "Kotlin入门-RecyclerView-RecyclerLinear", "RecyclerView-RecyclerLinear"))
+        mList!!.add(TitleBean(40, "Kotlin入门-RecyclerView-RecyclerGrid", "RecyclerView-RecyclerGrid"))
+        mList!!.add(TitleBean(41, "Kotlin入门-RecyclerView-RecyclerStaggered", "RecyclerView-RecyclerStaggered"))
+        mList!!.add(TitleBean(42, "Kotlin入门-Coordinator", "Coordinator协调者布局"))
     }
 }

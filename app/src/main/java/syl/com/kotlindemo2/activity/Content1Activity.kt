@@ -173,6 +173,34 @@ class Content1Activity : BaseActivity() {
                 transaction.replace(R.id.fl_content1, KotlinAlertDialogFragment())
                 transaction.commit()
             }
+            36 -> {
+                transaction.replace(R.id.fl_content1, KotlinSpinnerDialogFragment())
+                transaction.commit()
+            }
+            37 -> {
+                transaction.replace(R.id.fl_content1, KotlinListViewFragment())
+                transaction.commit()
+            }
+            38 -> {
+                transaction.replace(R.id.fl_content1, KotlinGridViewFragment())
+                transaction.commit()
+            }
+            39 -> {
+                transaction.replace(R.id.fl_content1, KotlinRecyclerLinearFragment())
+                transaction.commit()
+            }
+            40 -> {
+                transaction.replace(R.id.fl_content1, KotlinRecyclerGridFragment())
+                transaction.commit()
+            }
+            41 -> {
+                transaction.replace(R.id.fl_content1, KotlinRecyclerStaggeredFragment())
+                transaction.commit()
+            }
+            42 -> {
+                transaction.replace(R.id.fl_content1, KotlinCoordinatorFragment())
+                transaction.commit()
+            }
             else -> {
                 val fragment = Demo1Fragment()
                 transaction.replace(R.id.fl_content1, fragment)
