@@ -24,7 +24,7 @@ class ContentFragment1 : BaseFragment() {
     var mList: MutableList<TitleBean>? = mutableListOf()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_content1, container, false)
-        val rv:RecyclerView = rootView.findViewById<RecyclerView>(R.id.rv)
+        val rv: RecyclerView = rootView.findViewById<RecyclerView>(R.id.rv)
         val linearLayoutManager = LinearLayoutManager(context)
         linearLayoutManager.orientation = RecyclerView.VERTICAL
         rv.layoutManager = linearLayoutManager
@@ -64,6 +64,62 @@ class ContentFragment1 : BaseFragment() {
             } else if (35 == position) {
                 startActivity(
                     Intent(activity, LoginPageActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
+                    )
+                )
+            } else if (43 == position) {
+                startActivity(
+                    Intent(activity, ToolBarActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
+                    )
+                )
+            } else if (44 == position) {
+                startActivity(
+                    Intent(activity, AppBarRecyclerActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
+                    )
+                )
+            } else if (45 == position) {
+                startActivity(
+                    Intent(activity, AppBarNestedActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
+                    )
+                )
+            } else if (46 == position) {
+                startActivity(
+                    Intent(activity, CollapsePinActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
+                    )
+                )
+            } else if (47 == position) {
+                startActivity(
+                    Intent(activity, CollapseParallaxActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
+                    )
+                )
+            } else if (48 == position) {
+                startActivity(
+                    Intent(activity, ImageFadeActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
+                    )
+                )
+            } else if (49 == position) {
+                startActivity(
+                    Intent(activity, ScrollFlagActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
+                    )
+                )
+            } else if (50 == position) {
+                startActivity(
+                    Intent(activity, ScrollAliPayActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
@@ -120,5 +176,49 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(40, "Kotlin入门-RecyclerView-RecyclerGrid", "RecyclerView-RecyclerGrid"))
         mList!!.add(TitleBean(41, "Kotlin入门-RecyclerView-RecyclerStaggered", "RecyclerView-RecyclerStaggered"))
         mList!!.add(TitleBean(42, "Kotlin入门-Coordinator", "Coordinator协调者布局"))
+        mList!!.add(TitleBean(43, "Kotlin入门-ToolBar", "ToolBar"))
+        mList!!.add(TitleBean(44, "Kotlin入门-CoordinatorLayout+AppBarLayout", "CoordinatorLayout+AppBarLayout"))
+        mList!!.add(
+            TitleBean(
+                45,
+                "Kotlin入门-CoordinatorLayout+AppBarLayout+NestedScrollView",
+                "CoordinatorLayout+AppBarLayout+NestedScrollView"
+            )
+        )
+        mList!!.add(
+            TitleBean(
+                46,
+                "Kotlin入门-CoordinatorLayout+CollapsingToolbarLayout",
+                "CoordinatorLayout+CollapsingToolbarLayout"
+            )
+        )
+        mList!!.add(
+            TitleBean(
+                47,
+                "Kotlin入门-CoordinatorLayout+CollapseParallax",
+                "CoordinatorLayout+CollapseParallax"
+            )
+        )
+        mList!!.add(
+            TitleBean(
+                48,
+                "Kotlin入门-CoordinatorLayout+CollapseParallax+ImageFade",
+                "CoordinatorLayout+CollapseParallax+ImageFade"
+            )
+        )
+        mList!!.add(
+            TitleBean(
+                49,
+                "Kotlin入门-CoordinatorLayout+CollapsingToolbarLayout+ScrollFlag",
+                "CoordinatorLayout+CollapsingToolbarLayout+ScrollFlag"
+            )
+        )
+        mList!!.add(
+            TitleBean(
+                50,
+                "Kotlin入门-仿支付宝头部视差动画",
+                "CoordinatorLayout+CollapsingToolbarLayout+ScrollAliPay"
+            )
+        )
     }
 }

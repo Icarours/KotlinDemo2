@@ -50,6 +50,24 @@
         </activity>
         <activity android:name=".activity.ActSecondActivity">
         </activity>
+        <activity android:name=".activity.ToolBarActivity">
+        </activity>
+        <activity android:name=".activity.AppBarRecyclerActivity">
+        </activity>
+        <activity android:name=".activity.AppBarNestedActivity">
+        </activity>
+        <activity android:name=".activity.CollapsePinActivity">
+        </activity>
+        <activity
+                android:name=".activity.CollapseParallaxActivity"
+                android:theme="@style/Activity_no_title">
+        </activity>
+        <activity android:name=".activity.ImageFadeActivity">
+        </activity>
+        <activity android:name=".activity.ScrollFlagActivity">
+        </activity>
+        <activity android:name=".activity.ScrollAliPayActivity">
+        </activity>
     </application>
 
 </manifest>
