@@ -68,6 +68,12 @@
         </activity>
         <activity android:name=".activity.ScrollAliPayActivity">
         </activity>
+        <activity android:name=".activity.ViewPagerActivity">
+        </activity>
+        <activity android:name=".activity.FragmentDynamicActivity">
+        </activity>
+        <activity android:name=".activity.TabLayoutActivity">
+        </activity>
     </application>
 
 </manifest>

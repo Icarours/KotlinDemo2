@@ -124,6 +124,27 @@ class ContentFragment1 : BaseFragment() {
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
                 )
+            } else if (51 == position) {
+                startActivity(
+                    Intent(activity, ViewPagerActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(51, "Kotlin入门-ViewPager", "ViewPager")
+                    )
+                )
+            } else if (52 == position) {
+                startActivity(
+                    Intent(activity, FragmentDynamicActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(52, "Kotlin入门-FragmentDynamic", "FragmentDynamic-碎片化")
+                    )
+                )
+            } else if (53 == position) {
+                startActivity(
+                    Intent(activity, TabLayoutActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(53, "Kotlin入门-TabLayout", "TabLayout+ToolBar+ViewPager")
+                    )
+                )
             } else {//其他条目跳转到Content1Activity
                 startActivity(Intent(activity, Content1Activity::class.java).putExtra("title", mList?.get(position)))
             }
@@ -220,5 +241,8 @@ class ContentFragment1 : BaseFragment() {
                 "CoordinatorLayout+CollapsingToolbarLayout+ScrollAliPay"
             )
         )
+        mList!!.add(TitleBean(51, "Kotlin入门-ViewPager", "ViewPager"))
+        mList!!.add(TitleBean(52, "Kotlin入门-FragmentDynamic", "FragmentDynamic-碎片化"))
+        mList!!.add(TitleBean(53, "Kotlin入门-TabLayout", "TabLayout"))
     }
 }
