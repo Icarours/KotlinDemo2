@@ -14,7 +14,7 @@ import syl.com.kotlindemo2.fragment.content1.*
  * author   Bright
  * date     2019/4/5 15:34
  * desc
- * Activity的基类
+ * content1的Activity
  */
 class Content1Activity : BaseActivity() {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)

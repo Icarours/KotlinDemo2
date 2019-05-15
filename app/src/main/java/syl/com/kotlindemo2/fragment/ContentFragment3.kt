@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_content1.view.*
 import syl.com.kotlindemo2.R
 import syl.com.kotlindemo2.adapter.ContentAdapter
 import syl.com.kotlindemo2.base.BaseFragment
@@ -18,18 +19,17 @@ import syl.com.kotlindemo2.bean.TitleBean
  * @Called
  */
 class ContentFragment3 : BaseFragment() {
-    var mList: MutableList<TitleBean>? = mutableListOf<TitleBean>()
+    var mList: MutableList<TitleBean>? = mutableListOf()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val rootView = inflater.inflate(R.layout.fragment_content1, container, false)
-        val rv = rootView.findViewById<RecyclerView>(R.id.rv)
-        val linearLayoutManager = LinearLayoutManager(context)
-        linearLayoutManager.orientation = RecyclerView.VERTICAL
-        rv.layoutManager = linearLayoutManager
-        rv.addItemDecoration(DividerItemDecoration(context, RecyclerView.VERTICAL))
+        return inflater.inflate(R.layout.fragment_content1, container, false).apply {
+            val linearLayoutManager = LinearLayoutManager(context)
+            linearLayoutManager.orientation = RecyclerView.VERTICAL
+            rv.layoutManager = linearLayoutManager
+            rv.addItemDecoration(DividerItemDecoration(context, RecyclerView.VERTICAL))
 
-        val adapter = ContentAdapter(R.layout.rv_title, mList)
-        rv.adapter = adapter
-        return rootView
+            val adapter = ContentAdapter(R.layout.rv_title, mList)
+            rv.adapter = adapter
+        }
     }
 
     override fun initData() {

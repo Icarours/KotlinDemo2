@@ -5,31 +5,24 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activity.content1.ViewPagerActivity">
+        tools:context=".activity.content1.SwipeRecyclerActivity">
     <include android:id="@+id/include_tool_bar"
              layout="@layout/simple_tool_bar"
              app:layout_constraintEnd_toEndOf="parent"
              app:layout_constraintStart_toStartOf="parent"
              app:layout_constraintTop_toTopOf="parent"/>
-    <LinearLayout
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_dynamic"
             app:layout_constraintTop_toBottomOf="@id/include_tool_bar"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:padding="10dp" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-    >
+            android:layout_height="0dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent">
 
-        <androidx.viewpager.widget.ViewPager
-                android:id="@+id/vp_content"
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_dynamic"
                 android:layout_width="match_parent"
-                android:layout_height="400dp">
-
-            <androidx.viewpager.widget.PagerTabStrip
-                    android:id="@+id/pts_tab"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-        </androidx.viewpager.widget.ViewPager>
-    </LinearLayout>
-
+                android:layout_height="wrap_content"
+                android:background="#aaaaff"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

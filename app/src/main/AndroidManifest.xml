@@ -19,9 +19,9 @@
         </activity>
         <activity android:name=".activity.ActRequestActivity">
         </activity>
-        <activity android:name=".activity.ParcelableSecondActivity">
+        <activity android:name=".activity.content1.ParcelableSecondActivity">
         </activity>
-        <activity android:name=".activity.ParcelableFirstActivity">
+        <activity android:name=".activity.content1.ParcelableFirstActivity">
         </activity>
         <activity
                 android:name=".activity.MainActivity"
@@ -50,29 +50,39 @@
         </activity>
         <activity android:name=".activity.ActSecondActivity">
         </activity>
-        <activity android:name=".activity.ToolBarActivity">
+        <activity android:name=".activity.content1.ToolBarActivity">
         </activity>
-        <activity android:name=".activity.AppBarRecyclerActivity">
+        <activity android:name=".activity.content1.AppBarRecyclerActivity">
         </activity>
-        <activity android:name=".activity.AppBarNestedActivity">
+        <activity android:name=".activity.content1.AppBarNestedActivity">
         </activity>
-        <activity android:name=".activity.CollapsePinActivity">
+        <activity android:name=".activity.content1.CollapsePinActivity">
         </activity>
         <activity
-                android:name=".activity.CollapseParallaxActivity"
+                android:name=".activity.content1.CollapseParallaxActivity"
                 android:theme="@style/Activity_no_title">
         </activity>
         <activity android:name=".activity.ImageFadeActivity">
         </activity>
-        <activity android:name=".activity.ScrollFlagActivity">
+        <activity android:name=".activity.content1.ScrollFlagActivity">
         </activity>
-        <activity android:name=".activity.ScrollAliPayActivity">
+        <activity android:name=".activity.content1.ScrollAliPayActivity">
         </activity>
-        <activity android:name=".activity.ViewPagerActivity">
+        <activity android:name=".activity.content1.ViewPagerActivity">
         </activity>
-        <activity android:name=".activity.FragmentDynamicActivity">
+        <activity android:name=".activity.content1.FragmentDynamicActivity">
         </activity>
-        <activity android:name=".activity.TabLayoutActivity">
+        <activity android:name=".activity.content1.TabLayoutActivity">
+        </activity>
+        <activity android:name=".activity.content1.BroadTempActivity">
+        </activity>
+        <activity android:name=".activity.content1.BroadSystemActivity">
+        </activity>
+        <activity android:name=".activity.content1.SwipeRecyclerActivity">
+        </activity>
+        <activity android:name=".activity.content1.DepartmentChannelActivity">
+        </activity>
+        <activity android:name=".activity.Content2Activity">
         </activity>
     </application>
 

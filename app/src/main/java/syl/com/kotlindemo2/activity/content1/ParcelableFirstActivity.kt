@@ -1,4 +1,4 @@
-package syl.com.kotlindemo2.activity
+package syl.com.kotlindemo2.activity.content1
 
 import android.os.Build
 import android.os.Bundle

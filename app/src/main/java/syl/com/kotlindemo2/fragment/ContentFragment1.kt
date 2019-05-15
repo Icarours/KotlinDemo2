@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import syl.com.kotlindemo2.R
 import syl.com.kotlindemo2.activity.*
+import syl.com.kotlindemo2.activity.content1.*
 import syl.com.kotlindemo2.adapter.ContentAdapter
 import syl.com.kotlindemo2.base.BaseFragment
 import syl.com.kotlindemo2.bean.TitleBean
@@ -145,6 +146,34 @@ class ContentFragment1 : BaseFragment() {
                         TitleBean(53, "Kotlin入门-TabLayout", "TabLayout+ToolBar+ViewPager")
                     )
                 )
+            } else if (54 == position) {
+                startActivity(
+                    Intent(activity, BroadTempActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(54, "Kotlin入门-BroadcastReceiver", "广播")
+                    )
+                )
+            } else if (55 == position) {
+                startActivity(
+                    Intent(activity, BroadSystemActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(55, "Kotlin入门-BroadcastReceiver-System", "系统广播")
+                    )
+                )
+            } else if (56 == position) {
+                startActivity(
+                    Intent(activity, SwipeRecyclerActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(56, "Kotlin入门-SwipeRecycler", "下拉刷新")
+                    )
+                )
+            } else if (57 == position) {
+                startActivity(
+                    Intent(activity, DepartmentChannelActivity::class.java).putExtra(
+                        "title",
+                        TitleBean(57, "Kotlin入门-SwipeRecycler-GridRecyclerView", "GridRecyclerView下拉刷新")
+                    )
+                )
             } else {//其他条目跳转到Content1Activity
                 startActivity(Intent(activity, Content1Activity::class.java).putExtra("title", mList?.get(position)))
             }
@@ -244,5 +273,9 @@ class ContentFragment1 : BaseFragment() {
         mList!!.add(TitleBean(51, "Kotlin入门-ViewPager", "ViewPager"))
         mList!!.add(TitleBean(52, "Kotlin入门-FragmentDynamic", "FragmentDynamic-碎片化"))
         mList!!.add(TitleBean(53, "Kotlin入门-TabLayout", "TabLayout"))
+        mList!!.add(TitleBean(54, "Kotlin入门-BroadcastReceiver", "广播"))
+        mList!!.add(TitleBean(55, "Kotlin入门-BroadcastReceiver-System", "系统广播"))
+        mList!!.add(TitleBean(56, "Kotlin入门-SwipeRecycler-RecyclerView", "下拉刷新"))
+        mList!!.add(TitleBean(57, "Kotlin入门-SwipeRecycler-GridRecyclerView", "GridRecyclerView下拉刷新"))
     }
 }
