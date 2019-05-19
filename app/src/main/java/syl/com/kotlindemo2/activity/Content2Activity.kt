@@ -3,13 +3,12 @@ package syl.com.kotlindemo2.activity
 import android.os.Build
 import android.os.Bundle
 import androidx.annotation.RequiresApi
-import androidx.appcompat.widget.Toolbar
+import kotlinx.android.synthetic.main.simple_tool_bar.*
 import syl.com.kotlindemo2.R
 import syl.com.kotlindemo2.base.BaseActivity
 import syl.com.kotlindemo2.bean.TitleBean
 import syl.com.kotlindemo2.fragment.content1.Demo1Fragment
-import syl.com.kotlindemo2.fragment.content2.MessageFragment
-import syl.com.kotlindemo2.fragment.content2.ProgressDialogFragment
+import syl.com.kotlindemo2.fragment.content2.*
 
 /**
  * author   Bright
@@ -25,11 +24,9 @@ class Content2Activity : BaseActivity() {
         setContentView(R.layout.activity_content2)
 
         val titleBean = intent.getParcelableExtra("title") as TitleBean
-        val mToolbar = findViewById<Toolbar>(R.id.toolbar)
-        mToolbar.title = titleBean.title
-        mToolbar.title = titleBean.title
-        mToolbar.subtitle = titleBean.description
-        initToolBar(mToolbar)
+        toolbar.title = titleBean.title
+        toolbar.subtitle = titleBean.description
+        initToolBar(toolbar)
 
         initFragment(titleBean)
     }
@@ -44,6 +41,22 @@ class Content2Activity : BaseActivity() {
             }
             1 -> {
                 transaction.replace(R.id.fl_content2, ProgressDialogFragment())
+                transaction.commit()
+            }
+            2 -> {
+                transaction.replace(R.id.fl_content2, ProgressCircleFragment())
+                transaction.commit()
+            }
+            4 -> {
+                transaction.replace(R.id.fl_content2, JsonParseFragment())
+                transaction.commit()
+            }
+            5 -> {
+                transaction.replace(R.id.fl_content2, JsonConvertFragment())
+                transaction.commit()
+            }
+            7 -> {
+                transaction.replace(R.id.fl_content2, HttpImageFragment())
                 transaction.commit()
             }
             else -> {

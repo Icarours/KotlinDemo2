@@ -34,148 +34,130 @@ class ContentFragment1 : BaseFragment() {
         val adapter = ContentAdapter(R.layout.rv_title, mList)
         rv.adapter = adapter
         adapter.setOnItemClickListener { adapter1, view, position ->
-            if (22 == position) {//该条目直接跳转到一个新的Activity,ButtonClickActivity
-                startActivity(
-                    Intent(activity, ButtonClickActivity::class.java).putExtra(
-                        "title",
-                        TitleBean(0, "button", "button 在Activity中")
+            when (position) {
+                22 -> //该条目直接跳转到一个新的Activity,ButtonClickActivity
+                    startActivity(
+                        Intent(activity, ButtonClickActivity::class.java).putExtra(
+                            "title",
+                            TitleBean(0, "button", "button 在Activity中")
+                        )
                     )
-                )
-            } else if (31 == position) {
-                startActivity(
+                31 -> startActivity(
                     Intent(activity, ActFirstActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "Activity跳转", "无返回数据")
                     )
                 )
-            } else if (32 == position) {
-                startActivity(
+                32 -> startActivity(
                     Intent(activity, ParcelableFirstActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "Activity跳转", "请求打包数据 Parcelable")
                     )
                 )
-            } else if (33 == position) {
-                startActivity(
+                33 -> startActivity(
                     Intent(activity, ActRequestActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "Activity跳转", "有返回数据")
                     )
                 )
-            } else if (35 == position) {
-                startActivity(
+                35 -> startActivity(
                     Intent(activity, LoginPageActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
                 )
-            } else if (43 == position) {
-                startActivity(
+                43 -> startActivity(
                     Intent(activity, ToolBarActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
                 )
-            } else if (44 == position) {
-                startActivity(
+                44 -> startActivity(
                     Intent(activity, AppBarRecyclerActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
                 )
-            } else if (45 == position) {
-                startActivity(
+                45 -> startActivity(
                     Intent(activity, AppBarNestedActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
                 )
-            } else if (46 == position) {
-                startActivity(
+                46 -> startActivity(
                     Intent(activity, CollapsePinActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
                 )
-            } else if (47 == position) {
-                startActivity(
+                47 -> startActivity(
                     Intent(activity, CollapseParallaxActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
                 )
-            } else if (48 == position) {
-                startActivity(
+                48 -> startActivity(
                     Intent(activity, ImageFadeActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
                 )
-            } else if (49 == position) {
-                startActivity(
+                49 -> startActivity(
                     Intent(activity, ScrollFlagActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
                 )
-            } else if (50 == position) {
-                startActivity(
+                50 -> startActivity(
                     Intent(activity, ScrollAliPayActivity::class.java).putExtra(
                         "title",
                         TitleBean(0, "登录页面LoginPageActivity", "登录页面LoginPage")
                     )
                 )
-            } else if (51 == position) {
-                startActivity(
+                51 -> startActivity(
                     Intent(activity, ViewPagerActivity::class.java).putExtra(
                         "title",
                         TitleBean(51, "Kotlin入门-ViewPager", "ViewPager")
                     )
                 )
-            } else if (52 == position) {
-                startActivity(
+                52 -> startActivity(
                     Intent(activity, FragmentDynamicActivity::class.java).putExtra(
                         "title",
                         TitleBean(52, "Kotlin入门-FragmentDynamic", "FragmentDynamic-碎片化")
                     )
                 )
-            } else if (53 == position) {
-                startActivity(
+                53 -> startActivity(
                     Intent(activity, TabLayoutActivity::class.java).putExtra(
                         "title",
                         TitleBean(53, "Kotlin入门-TabLayout", "TabLayout+ToolBar+ViewPager")
                     )
                 )
-            } else if (54 == position) {
-                startActivity(
+                54 -> startActivity(
                     Intent(activity, BroadTempActivity::class.java).putExtra(
                         "title",
                         TitleBean(54, "Kotlin入门-BroadcastReceiver", "广播")
                     )
                 )
-            } else if (55 == position) {
-                startActivity(
+                55 -> startActivity(
                     Intent(activity, BroadSystemActivity::class.java).putExtra(
                         "title",
                         TitleBean(55, "Kotlin入门-BroadcastReceiver-System", "系统广播")
                     )
                 )
-            } else if (56 == position) {
-                startActivity(
+                56 -> startActivity(
                     Intent(activity, SwipeRecyclerActivity::class.java).putExtra(
                         "title",
                         TitleBean(56, "Kotlin入门-SwipeRecycler", "下拉刷新")
                     )
                 )
-            } else if (57 == position) {
-                startActivity(
+                57 -> startActivity(
                     Intent(activity, DepartmentChannelActivity::class.java).putExtra(
                         "title",
                         TitleBean(57, "Kotlin入门-SwipeRecycler-GridRecyclerView", "GridRecyclerView下拉刷新")
                     )
                 )
-            } else {//其他条目跳转到Content1Activity
-                startActivity(Intent(activity, Content1Activity::class.java).putExtra("title", mList?.get(position)))
+                else -> //其他条目跳转到Content1Activity
+                    startActivity(Intent(activity, Content1Activity::class.java).putExtra("title", mList?.get(position)))
             }
             Toast.makeText(context, "clicked---$position", Toast.LENGTH_SHORT).show()
         }

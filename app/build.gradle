@@ -42,8 +42,11 @@ dependencies {
     implementation 'com.github.baserecycleradapter:library:1.1.0'
     //RecyclerView框架
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.31'
-
     implementation "org.jetbrains.anko:anko:$anko_version"
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //高德地图定位,仅含定位功能
+    implementation files('libs/AMap_Location_V4.6.0_20190423.jar')
 }
 //@Parcelize标记和LayoutContainer需要设置experimental = true
 androidExtensions {

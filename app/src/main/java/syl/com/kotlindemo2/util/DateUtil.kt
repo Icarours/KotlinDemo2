@@ -47,4 +47,10 @@ object DateUtil {
         else SimpleDateFormat("yyyyMMddHHmmss")
         return sdf.format(Date())
     }
+
+    fun formatDate(time: Long): String {
+        val date = Date(time)
+        val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+        return sdf.format(date)
+    }
 }
