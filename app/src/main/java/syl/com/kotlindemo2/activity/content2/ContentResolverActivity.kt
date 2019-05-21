@@ -50,6 +50,7 @@ class ContentResolverActivity : BaseActivity() {
         tv_read_contact.setOnClickListener {
             alert(contactResult, contactCount) {
                 positiveButton("确定") {}
+                isCancelable= false//点击对话框外部不会消失
             }.show()
         }
         //TextView可以竖直滚动

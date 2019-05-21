@@ -21,6 +21,7 @@ class KotlinAlertDialogFragment: BaseFragment() {
                 alert("你真的要卸载我吗？", "尊敬的用户") {
                     positiveButton("残忍卸载") { tv_alert.text = "虽然依依不舍，但是只能离开了" }
                     negativeButton("我再想想") { tv_alert.text = "让我再陪你三百六十五个日夜" }
+                    isCancelable= false//点击对话框外部不会消失
                 }.show()
             }
         }

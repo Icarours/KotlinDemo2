@@ -107,6 +107,30 @@ class ContentFragment2 : BaseFragment() {
                             )
                         }
                     }
+                    12 -> {
+                        startActivity(
+                            Intent(activity, SpannableActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    13 -> {
+                        startActivity(
+                            Intent(activity, ShareWriteActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    14 -> {
+                        startActivity(
+                            Intent(activity, ShareReadActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
                     else -> {
                         //其他条目跳转到Content1Activity
                         startActivity(
@@ -135,6 +159,9 @@ class ContentFragment2 : BaseFragment() {
         mList!!.add(TitleBean(9, "kotlin入门-DownloadManager2", "下载图片"))
         mList!!.add(TitleBean(10, "kotlin入门-ContentProvider", "内容提供者"))
         mList!!.add(TitleBean(11, "kotlin入门-ContentResolverActivity", "内容解析者"))
+        mList!!.add(TitleBean(12, "kotlin入门-可变字符串", "可变字符串"))
+        mList!!.add(TitleBean(13, "kotlin入门-SharedPreference", "SharedPreference 写入"))
+        mList!!.add(TitleBean(14, "kotlin入门-SharedPreference", "SharedPreference 读取"))
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
@@ -144,7 +171,7 @@ class ContentFragment2 : BaseFragment() {
             } else {
                 toast("需要允许定位权限才能获取位置信息噢")
             }
-        }else if (requestCode == 1200) {
+        } else if (requestCode == 1200) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 startActivity<ContentResolverActivity>()
             } else {
