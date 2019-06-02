@@ -7,11 +7,13 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.simple_tool_bar.*
 import syl.com.kotlindemo2.R
 import syl.com.kotlindemo2.base.BaseActivity
 import syl.com.kotlindemo2.fragment.ContentFragment1
 import syl.com.kotlindemo2.fragment.ContentFragment2
 import syl.com.kotlindemo2.fragment.ContentFragment3
+
 /**
  * author   Bright
  * date     2019/3/19 0:57
@@ -53,6 +55,7 @@ class MainActivity : BaseActivity() {
         transaction.replace(R.id.fl, ContentFragment1())
         transaction.commit()
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        toolbar.navigationIcon = null//隐藏ToolBar的返回键
     }
 
     internal inner class MyAdapter : FragmentPagerAdapter {

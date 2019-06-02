@@ -38,6 +38,40 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.content2.MeasureViewActivity">
+        </activity>
+        <activity android:name=".activity.content2.CustomPropertyActivity">
+        </activity>
+        <activity android:name=".activity.content2.ShoppingDetailActivity">
+        </activity>
+        <activity android:name=".activity.content2.ShoppingChannelActivity">
+        </activity>
+        <activity android:name=".activity.content2.ShoppingCartActivity">
+        </activity>
+        <activity android:name=".activity.content2.MenuOptionActivity">
+        </activity>
+        <activity android:name=".activity.content2.AppReadActivity">
+        </activity>
+        <activity android:name=".activity.content2.AppWriteActivity">
+        </activity>
+        <activity android:name=".activity.content2.ImageReadActivity">
+        </activity>
+        <activity android:name=".activity.content2.ImageWriteActivity">
+        </activity>
+        <activity android:name=".activity.content2.TextReadActivity">
+        </activity>
+        <activity android:name=".activity.content2.TextWriteActivity">
+        </activity>
+        <activity android:name=".activity.content2.FilePathActivity">
+        </activity>
+        <activity android:name=".activity.content2.LoginSQLiteActivity">
+        </activity>
+        <activity android:name=".activity.content2.SQLiteReadActivity">
+        </activity>
+        <activity android:name=".activity.content2.SQLiteWriteActivity">
+        </activity>
+        <activity android:name=".activity.content2.LoginShareActivity">
+        </activity>
         <activity android:name=".activity.content2.ShareReadActivity">
         </activity>
         <activity android:name=".activity.content2.ShareWriteActivity">

@@ -30,8 +30,8 @@ class LoginForgetActivity : BaseActivity() {
         val titleBean = intent.getParcelableExtra("title") as TitleBean
         val mToolbar = findViewById<Toolbar>(R.id.toolbar)
         mToolbar.title = titleBean!!.title
-        mToolbar.title = titleBean!!.title
         mToolbar.subtitle = titleBean!!.description
+
         initToolBar(mToolbar)
 
         btn_verifycode.setOnClickListener { getVerifycode() }

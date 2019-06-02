@@ -131,6 +131,126 @@ class ContentFragment2 : BaseFragment() {
                             )
                         )
                     }
+                    15 -> {
+                        startActivity(
+                            Intent(activity, LoginShareActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    16 -> {
+                        startActivity(
+                            Intent(activity, SQLiteWriteActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    17 -> {
+                        startActivity(
+                            Intent(activity, SQLiteReadActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    18 -> {
+                        startActivity(
+                            Intent(activity, LoginSQLiteActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    19 -> {
+                        startActivity(
+                            Intent(activity, FilePathActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    20 -> {
+                        startActivity(
+                            Intent(activity, TextWriteActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    21 -> {
+                        startActivity(
+                            Intent(activity, TextReadActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    22 -> {
+                        startActivity(
+                            Intent(activity, ImageWriteActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    23 -> {
+                        startActivity(
+                            Intent(activity, ImageReadActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    24 -> {
+                        startActivity(
+                            Intent(activity, AppWriteActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    25 -> {
+                        startActivity(
+                            Intent(activity, AppReadActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    26 -> {
+                        startActivity(
+                            Intent(activity, MenuOptionActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    27 -> {
+                        startActivity(
+                            Intent(activity, ShoppingCartActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    28 -> {
+                        startActivity(
+                            Intent(activity, CustomPropertyActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    29 -> {
+                        startActivity(
+                            Intent(activity, MeasureViewActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
                     else -> {
                         //其他条目跳转到Content1Activity
                         startActivity(
@@ -162,6 +282,21 @@ class ContentFragment2 : BaseFragment() {
         mList!!.add(TitleBean(12, "kotlin入门-可变字符串", "可变字符串"))
         mList!!.add(TitleBean(13, "kotlin入门-SharedPreference", "SharedPreference 写入"))
         mList!!.add(TitleBean(14, "kotlin入门-SharedPreference", "SharedPreference 读取"))
+        mList!!.add(TitleBean(15, "kotlin入门-SharedPreference", "SharedPreference-登录"))
+        mList!!.add(TitleBean(16, "kotlin入门-数据库Sqlite", "数据库Sqlite-存储"))
+        mList!!.add(TitleBean(17, "kotlin入门-数据库Sqlite", "数据库Sqlite-读取"))
+        mList!!.add(TitleBean(18, "kotlin入门-数据库Sqlite-登录", "数据库Sqlite-登录"))
+        mList!!.add(TitleBean(19, "kotlin入门-文件处理-文件路径", "文件处理-文件保存位置"))
+        mList!!.add(TitleBean(20, "kotlin入门-文件处理-文本文件保存", "文件处理-文件保存-TextWrite"))
+        mList!!.add(TitleBean(21, "kotlin入门-文件处理-文本文件读取", "文件处理-文件读取-TextWrite"))
+        mList!!.add(TitleBean(22, "kotlin入门-文件处理-写入图片文件", "文件处理-写入图片文件"))
+        mList!!.add(TitleBean(23, "kotlin入门-文件处理-读取图片文件", "文件处理-读取图片文件"))
+        mList!!.add(TitleBean(24, "kotlin入门-保存信息到全局变量-MyApplication", "保存信息到全局变量-MyApplication"))
+        mList!!.add(TitleBean(25, "kotlin入门-从全局变量MyApplication读取信息", "从全局变量MyApplication读取信息"))
+        mList!!.add(TitleBean(26, "kotlin入门-ToolBar选项菜单", "ToolBar选项菜单"))
+        mList!!.add(TitleBean(27, "kotlin入门-购物车", "购物车"))
+        mList!!.add(TitleBean(28, "kotlin入门-自定义选项卡", "自定义选项卡"))
+        mList!!.add(TitleBean(29, "kotlin入门-测量视图尺寸", "测量视图尺寸"))
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {

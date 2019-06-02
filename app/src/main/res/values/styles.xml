@@ -11,6 +11,9 @@
     <style name="Activity_no_title" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
+    <style name="AppCompatTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
     <style name="btn1">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
