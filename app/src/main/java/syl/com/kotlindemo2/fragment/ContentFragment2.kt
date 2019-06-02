@@ -251,6 +251,54 @@ class ContentFragment2 : BaseFragment() {
                             )
                         )
                     }
+                    30 -> {
+                        startActivity(
+                            Intent(activity, DrawRoundActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    31 -> {
+                        startActivity(
+                            Intent(activity, RunnableActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    32 -> {
+                        startActivity(
+                            Intent(activity, ProgressBarActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    33 -> {
+                        startActivity(
+                            Intent(activity, TextProgressActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    34 -> {
+                        startActivity(
+                            Intent(activity, ProgressAnimationActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    35 -> {
+                        startActivity(
+                            Intent(activity, NotifySimpleActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
                     else -> {
                         //其他条目跳转到Content1Activity
                         startActivity(
@@ -297,6 +345,12 @@ class ContentFragment2 : BaseFragment() {
         mList!!.add(TitleBean(27, "kotlin入门-购物车", "购物车"))
         mList!!.add(TitleBean(28, "kotlin入门-自定义选项卡", "自定义选项卡"))
         mList!!.add(TitleBean(29, "kotlin入门-测量视图尺寸", "测量视图尺寸"))
+        mList!!.add(TitleBean(30, "kotlin入门-绘制圆角边框", "绘制圆角边框"))
+        mList!!.add(TitleBean(31, "kotlin入门-延迟执行", "线程-Handler"))
+        mList!!.add(TitleBean(32, "kotlin入门-水平进度条", "水平进度条"))
+        mList!!.add(TitleBean(33, "kotlin入门-水平进度条-文字", "水平进度条-文字"))
+        mList!!.add(TitleBean(34, "kotlin入门-水平进度条动画", "水平进度条动画"))
+        mList!!.add(TitleBean(35, "kotlin入门-发送简单通知", "发送简单通知"))
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
