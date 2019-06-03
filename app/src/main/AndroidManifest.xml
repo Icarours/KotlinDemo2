@@ -38,6 +38,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.content2.NotifyLargeActivity">
+        </activity>
         <activity android:name=".activity.content2.NotifySimpleActivity">
         </activity>
         <activity android:name=".activity.content2.ProgressAnimationActivity">

@@ -299,6 +299,14 @@ class ContentFragment2 : BaseFragment() {
                             )
                         )
                     }
+                    36 -> {
+                        startActivity(
+                            Intent(activity, NotifyLargeActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
                     else -> {
                         //其他条目跳转到Content1Activity
                         startActivity(
@@ -350,7 +358,8 @@ class ContentFragment2 : BaseFragment() {
         mList!!.add(TitleBean(32, "kotlin入门-水平进度条", "水平进度条"))
         mList!!.add(TitleBean(33, "kotlin入门-水平进度条-文字", "水平进度条-文字"))
         mList!!.add(TitleBean(34, "kotlin入门-水平进度条动画", "水平进度条动画"))
-        mList!!.add(TitleBean(35, "kotlin入门-发送简单通知", "发送简单通知"))
+        mList!!.add(TitleBean(35, "kotlin入门-发送简单通知", "发送简单通知,android8.0必须指定消息通道"))
+        mList!!.add(TitleBean(36, "kotlin入门-发送大图通知", "发送大图通知,android8.0必须指定消息通道"))
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
