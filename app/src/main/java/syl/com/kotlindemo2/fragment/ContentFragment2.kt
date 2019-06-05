@@ -307,6 +307,22 @@ class ContentFragment2 : BaseFragment() {
                             )
                         )
                     }
+                    37 -> {
+                        startActivity(
+                            Intent(activity, ServiceNormalActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    38 -> {
+                        startActivity(
+                            Intent(activity, ServiceBindActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
                     else -> {
                         //其他条目跳转到Content1Activity
                         startActivity(
@@ -360,6 +376,8 @@ class ContentFragment2 : BaseFragment() {
         mList!!.add(TitleBean(34, "kotlin入门-水平进度条动画", "水平进度条动画"))
         mList!!.add(TitleBean(35, "kotlin入门-发送简单通知", "发送简单通知,android8.0必须指定消息通道"))
         mList!!.add(TitleBean(36, "kotlin入门-发送大图通知", "发送大图通知,android8.0必须指定消息通道"))
+        mList!!.add(TitleBean(37, "kotlin入门-service", "service-普通方式启动服务"))
+        mList!!.add(TitleBean(38, "kotlin入门-service", "service-绑定方式启动服务"))
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {

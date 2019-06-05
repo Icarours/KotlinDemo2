@@ -15,6 +15,7 @@ import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import kotlinx.android.synthetic.main.activity_notify_large.*
+import kotlinx.android.synthetic.main.simple_tool_bar.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.selector
 import org.jetbrains.anko.toast
@@ -44,10 +45,12 @@ class NotifyLargeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notify_large)
-     /*   val titleBean = intent.getParcelableExtra("title") as TitleBean
-        toolbar.title = titleBean.title
-        toolbar.subtitle = titleBean.description
-        initToolBar(toolbar)*/
+
+        //从通知栏点进来会crash
+//        val titleBean = intent.getParcelableExtra("title") as TitleBean
+        toolbar.title = "kotlin入门-发送大图通知"
+        toolbar.subtitle = "发送大图通知,android8.0必须指定消息通道"
+        initToolBar(toolbar)
 
         sp_style.visibility = View.GONE
         tv_spinner.visibility = View.VISIBLE
