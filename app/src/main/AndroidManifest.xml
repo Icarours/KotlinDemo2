@@ -26,7 +26,9 @@
     <uses-permission android:name="android.permission.WRITE_SMS"/> <!-- 通话记录 -->
     <uses-permission android:name="android.permission.READ_CALL_LOG"/>
     <uses-permission android:name="android.permission.WRITE_CALL_LOG"/> <!-- 读取电话状态 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/> <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE"/> <!-- 允许前台服务 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <application
             android:name=".base.MyApplication"
@@ -38,6 +40,22 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.content2.NotifyCustomActivity">
+        </activity>
+        <activity android:name=".activity.content2.NotifySpecialActivity">
+        </activity>
+        <activity android:name=".activity.content2.NotifyLargeActivityV2">
+        </activity>
+        <activity android:name=".activity.content2.NotifyCounterActivity">
+        </activity>
+        <activity android:name=".activity.content2.NotifySimpleActivityV2">
+        </activity>
+        <activity android:name=".activity.content2.FreshDetailActivity">
+        </activity>
+        <activity android:name=".activity.content2.FreshPurchaseActivity">
+        </activity>
+        <activity android:name=".activity.content2.VibratorActivity">
+        </activity>
         <activity android:name=".activity.content2.ServiceBindActivity">
         </activity>
         <activity android:name=".activity.content2.ServiceNormalActivity">
@@ -206,8 +224,12 @@
         <service
                 android:name=".service.NormalService"
                 android:enabled="true"/>
-        <service android:name=".service.BindService"
-                 android:enabled="true"/>
+        <service
+                android:name=".service.BindService"
+                android:enabled="true"/>
+        <service
+                android:name=".service.GroupService"
+                android:enabled="true"/>
     </application>
 
 </manifest>

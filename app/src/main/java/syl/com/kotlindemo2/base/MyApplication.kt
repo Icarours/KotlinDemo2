@@ -2,6 +2,9 @@ package syl.com.kotlindemo2.base
 
 import android.app.Application
 import android.graphics.Bitmap
+import android.os.Build
+import syl.com.kotlindemo2.R
+import syl.com.kotlindemo2.util.NotifyUtil
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
@@ -10,13 +13,18 @@ import kotlin.reflect.KProperty
  * @Describe
  * @Called
  */
-class MyApplication:Application() {
+class MyApplication : Application() {
     var mInfoMap = mutableMapOf<String, String>()
     var mIconMap = mutableMapOf<Long, Bitmap>()
+    var groupMap = mutableMapOf<String, Boolean>()
 
     override fun onCreate() {
         super.onCreate()
         instance = this
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            // Android 8.0开始必须给每个通知分配对应的渠道
+            NotifyUtil.createNotifyChannel(this, getString(R.string.app_name))
+        }
     }
 
     //单例化的第一种方式：声明一个简单的Application属性

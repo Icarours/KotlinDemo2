@@ -323,6 +323,61 @@ class ContentFragment2 : BaseFragment() {
                             )
                         )
                     }
+                    39 -> {
+                        startActivity(
+                            Intent(activity, VibratorActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    40 -> {
+                        startActivity(
+                            Intent(activity, FreshPurchaseActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    41 -> {
+                        startActivity(
+                            Intent(activity, NotifySimpleActivityV2::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    42 -> {
+                        startActivity(
+                            Intent(activity, NotifyCounterActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    43 -> {
+                        startActivity(
+                            Intent(activity, NotifyLargeActivityV2::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
+                    44 -> {
+                        startActivity(
+                            Intent(activity, NotifySpecialActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    } 45 -> {
+                        startActivity(
+                            Intent(activity, NotifyCustomActivity::class.java).putExtra(
+                                "title",
+                                mList?.get(position)
+                            )
+                        )
+                    }
                     else -> {
                         //其他条目跳转到Content1Activity
                         startActivity(
@@ -378,6 +433,13 @@ class ContentFragment2 : BaseFragment() {
         mList!!.add(TitleBean(36, "kotlin入门-发送大图通知", "发送大图通知,android8.0必须指定消息通道"))
         mList!!.add(TitleBean(37, "kotlin入门-service", "service-普通方式启动服务"))
         mList!!.add(TitleBean(38, "kotlin入门-service", "service-绑定方式启动服务"))
+        mList!!.add(TitleBean(39, "kotlin入门-振动器", "振动器"))
+        mList!!.add(TitleBean(40, "kotlin入门-生鲜团购", "生鲜团购"))
+        mList!!.add(TitleBean(41, "kotlin入门-发送简单通知v2", "发送简单通知,android8.0必须指定消息通道"))
+        mList!!.add(TitleBean(42, "kotlin入门-发送计时通知", "发送计时通知,android8.0必须指定消息通道"))
+        mList!!.add(TitleBean(43, "kotlin入门-发送大图通知v2", "发送大图通知v2,android8.0必须指定消息通道"))
+        mList!!.add(TitleBean(44, "kotlin入门-发送特殊通知", "发送特殊通知,android8.0必须指定消息通道"))
+        mList!!.add(TitleBean(45, "kotlin入门-发送自定义通知", "发送自定义通知,android8.0必须指定消息通道"))
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
